@@ -1,1 +1,35 @@
 <!-- Put the HTML template for your page here! -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<title></title>
+</head>
+<body>
+	<h1>pasta</h1>
+	<p> because it sooo good</p>
+
+
+	<ul>
+		{% for i in food %}
+		<li>{{i}}</li>
+		{% endfor %}
+	</ul>
+
+	{% if leastFavFoods == True %}
+	    <p> those are my list favorite foods: </p>
+	    <ul>
+	    	<li>papaya</li>
+	    	<li>omega three</li>
+	    	<li>ecmuly</li>
+	    </ul>
+	{% else %}
+	{% endif %}
+
+
+
+
+
+</body>
+</html>
